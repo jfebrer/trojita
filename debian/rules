@@ -1,0 +1,15 @@
+#!/usr/bin/make -f
+
+export DEB_BUILD_HARDENING=1
+
+DEB_CONFIGURE_EXTRA_FLAGS := \
+	CONFIG+=disable_tests
+
+%:
+	dh $@ --parallel
+
+override_dh_auto_configure:
+	dh_auto_configure -- $(DEB_CONFIGURE_EXTRA_FLAGS) $(EXTRAFLAGS)
+
+override_dh_builddeb:
+	dh_builddeb -- -Zxz
