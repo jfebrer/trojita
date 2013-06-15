@@ -1,0 +1,20 @@
+Source: trojita
+Section: mail
+Priority: optional
+Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Build-Depends: libqt4-dev, libqtwebkit-dev, qt4-dev-tools, debhelper (>= 8),
+ pkg-kde-tools, pkg-config, ragel, zlib1g-dev
+Standards-Version: 3.9.3
+
+Package: trojita
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Homepage: http://trojita.flaska.net/
+Description: Trojitá, a fast Qt IMAP e-mail client
+ Trojitá is a pure Qt4 application with no additional dependencies, which is 
+ focused in being fast, standard compliant and efficient.
+ .
+ Other important features are: offline IMAP support, support for bandwidth-save 
+ mode, IMAP over SSH and SSL/TLS connections.
+ .
+ Trojitá does not support POP3. 
